@@ -3,6 +3,7 @@
   import { navigating, page } from "$app/stores";
   import { goto, prefetch, prefetchRoutes } from "$app/navigation";
   import Search from './Search.svelte';
+  import Logo from './Logo.svelte';
 
   const path = $page.path;
 
@@ -14,7 +15,7 @@
 <header>
   <div class="logo">
     <a href="/">
-      <img class="orc-logo" src="img/orclogo.svg" alt="Outer Rim Collective logo" width="340" height="160">
+      <Logo/>
     </a>
   </div>
   <nav>
@@ -30,7 +31,7 @@
 
 <style>
   header {
-    background-color: var(--oc-gray-2);
+    background-color: var(--oc-gray-9);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -41,8 +42,9 @@
     margin-top: var(--spacer);
   }
   .orc-logo {
-    width: 340px;
+    width: 200px;
     height: auto;
+    filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.4));
   }
   nav {
     width: 100%;
