@@ -46,6 +46,7 @@
 			grid-template-areas:
 				'hero'
 				'featured';
+			margin-bottom: 20vh;
 		}
 
 	.hero {

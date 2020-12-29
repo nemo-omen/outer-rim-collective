@@ -6,6 +6,8 @@ module.exports = {
 		'src/styles': '/_styles',
 	},
 	alias: {
-		$components: './src/components'
+		$components: './src/components',
+		$helpers: './helpers',
+		$styles: './src/styles'
 	}
 };
