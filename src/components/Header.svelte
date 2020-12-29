@@ -49,4 +49,16 @@
     background-color: var(--oc-red-9);
     padding: 0.5rem var(--spacer);
   }
+
+  @media (min-width: 1024px) {
+    .navbar {
+      position: relative;
+      flex-direction: row;
+      justify-content: space-between;
+      margin-top: var(--spacer);
+    }
+    header {
+      padding-bottom: 0;
+    }
+  }
 </style>
