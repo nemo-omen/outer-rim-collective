@@ -2,6 +2,7 @@
   import { onMount } from "svelte";
   import { navigating, page } from "$app/stores";
   import { goto, prefetch, prefetchRoutes } from "$app/navigation";
+  import Search from './Search.svelte';
 
   const path = $page.path;
 
@@ -23,12 +24,13 @@
     <a href="/models" class={path === '/models' ? 'active' : ''}>Gundam & Model Kits</a>
     <a href="/collectibles" class={path === '/collectibles' ? 'active' : ''}>Collectibles</a>
     <a href="/blog" class={path === '/blog' ? 'active' : ''}>Blog</a>
+    <Search/>
     </nav>
 </header>
 
 <style>
   header {
-    background-color: var(--oc-gray-1);
+    background-color: var(--oc-gray-2);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -47,15 +49,19 @@
     justify-self: stretch;
     display: flex;
     justify-content: space-evenly;
+    align-items: center;
     background-color: var(--oc-red-9);
     /* border-top: 1px solid var(--oc-red-7); */
     /* border-bottom: 1px solid var(--oc-red-7); */
-    padding: 0.5rem;
+    /* padding: 0.5rem; */
   }
   nav a {
     color: var(--oc-yellow-4);
     display: inline-block;
     line-height: 1;
     text-decoration: none;
+    padding: 0;
+    font-size: 1rem;
+    font-weight: 400;
   }
 </style>
