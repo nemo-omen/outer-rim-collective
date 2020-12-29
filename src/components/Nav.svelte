@@ -1,7 +1,7 @@
 <script>
   import { navigating, page } from "$app/stores";
   import { goto, prefetch, prefetchRoutes } from "$app/navigation";
-  // import Icon from './Icon.svelte';
+  import Icon from './Icon.svelte';
 
   const path = $page.path;
 </script>
@@ -9,25 +9,25 @@
 <nav class="mobile">
   <a href="/comics" class={path === '/comics' ? 'current' : ''}>
     <div class="nav-item">
-      <!-- <Icon name="comic" /> -->
+      <Icon name="comic" />
       Comics
     </div>
     </a>
     <a href="/books" class={path === '/books' ? 'current' : ''}>
       <div class="nav-item">
-        <!-- <Icon name="book" /> -->
+        <Icon name="book" />
         Books
       </div>
     </a>
     <a href="/collectibles" class={path === '/collectibles' ? 'current' : ''}>
       <div class="nav-item">
-        <!-- <Icon name="trophy" /> -->
+        <Icon name="trophy" />
         Collectibles
       </div>
     </a>
     <a href="/account" class={path === '/account' ? 'current' : ''}>
       <div class="nav-item">
-        <!-- <Icon name="person" /> -->
+        <Icon name="person" />
         Account
       </div>
     </a>

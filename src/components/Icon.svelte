@@ -1,14 +1,11 @@
-<script context="module">
-  import pathsByName from '$helpers/_icon-paths.js';
-  export const iconOptions = Object.keys(pathsByName);
-  export const directions = ['n', 'ne', 'e', 'se', 's', 'sw', 'w', 'nw'];
-</script>
-
 <script>
+  import {iconPaths} from './icon-paths.js';
+  const iconOptions = Object.keys(iconPaths);
+  const directions = ['n', 'ne', 'e', 'se', 's', 'sw', 'w', 'nw'];
+
   export let name = 'js';
   export let direction = 'n';
-
-  $: paths = pathsByName[name] || [];
+  $: paths = iconPaths[name] || [];
   $: rotation = directions.indexOf(direction) * 45;
 </script>
 

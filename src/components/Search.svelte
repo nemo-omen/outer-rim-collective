@@ -14,7 +14,7 @@
 <div class="search">
 	<input type="text" placeholder="Search..." />
 	<button class="icon" on:click={enterSearch} on:keyup={keyListener}>
-		<!-- <Icon name="search" /> -->
+		<Icon name="search" />
 	</button>
 </div>
 
